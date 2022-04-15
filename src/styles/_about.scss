@@ -1,0 +1,182 @@
+@use 'variables';
+@use 'mixins';
+
+.about{
+	@include mixins.default-grid;
+	@include mixins.section-container;
+    margin-bottom: 0rem;
+    padding-bottom: 2.5rem;
+
+	@include mixins.medium-screen{
+		grid-template-columns: 1fr minmax(0,80rem) 1fr;
+	}
+
+	&__heading{
+		@include mixins.section-heading;
+        @include mixins.default-grid;
+        text-align: right;
+        padding-right: 5rem;
+        padding-left: 2.5rem;
+
+		@include mixins.landscape{
+			font-size: 2.75rem;
+		}
+
+        @include mixins.medium-screen{
+			grid-column: 2/3;
+		}
+		
+	}
+
+    &__link{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 2rem;
+        height: 2rem;
+        place-self: center left;
+        font-size: 1.25rem;
+        background: white;
+        border-radius: 0.2rem;
+        color: var(--dark-blue);
+        @include mixins.default-grid;
+        place-items: center;
+
+        @include mixins.landscape{
+			width: 2.75rem;
+            height: 2.75rem;
+            font-size: 2rem;
+		}
+    }
+
+    &__heading-text{
+        grid-row: 1/2;
+    }
+
+    &__text{
+        padding: 2rem 3%;
+        color: var(--dark-blue);
+		line-height: 1.5;
+		font-size: 1.35rem;
+		text-align: center;
+        margin: 0 2.5%;
+
+        @include mixins.medium-screen{
+			grid-column: 2/3;
+		}
+    }
+}
+
+.filter-row{
+	width: 94%;
+	margin: 0 auto;
+	@include mixins.default-grid;
+	@include mixins.medium-screen{
+		grid-column: 2/3;
+	}
+}
+
+.dropdown-filters{
+	font-size: 1.05rem;
+	margin: 0.5rem 3% 0;
+	place-self: center right;
+	padding: 0.25rem;
+	border-radius: 0.7rem;
+	
+}
+
+.retro-punch{
+    &__color{
+        &_cyan{
+            color: #2FF3E0;
+        }
+        &_gold{
+            color: #F8D210;
+        }
+        &_pink{
+            color: #FA26A0;
+        }
+        &_red{
+            color: #F51720;
+        }
+    }
+    &__background{
+        &_cyan{
+            background-color: #2FF3E0;
+        }
+        &_gold{
+            background-color: #F8D210;
+        }
+        &_pink{
+            background-color: #FA26A0;
+        }
+        &_red{
+            background-color: #F51720;
+        }
+    }
+}
+
+.window-tide{
+    &__color{
+        &_midnight-blue{
+            color: #41729F;
+        }
+        &_blue-gray{
+            // light
+            color: #5885AF;
+        }
+        &_dark-blue{
+            // dark
+            color: #274472;
+        }
+        &_baby-blue{
+            color: #C3E0E5;
+        }
+    }
+    &__background{
+        &_midnight-blue{
+            background-color: #41729F;
+        }
+        &_blue-gray{
+            // light
+            background-color: #5885AF;
+        }
+        &_dark-blue{
+            // dark
+            background-color: #274472;
+        }
+        &_baby-blue{
+            background-color: #C3E0E5;
+        }
+    }
+}
+
+.bold-geometry{
+    &__color{
+        &_light-blue{
+            color: #0D698B;
+        }
+        &_ivory{
+            color: #F2F1E8;
+        }
+        &_dark-blue{
+            color: #050533;
+        }
+        &_red{
+            color: #E34234;
+        }
+    }
+    &__background{
+        &_light-blue{
+            background-color: #0D698B;
+        }
+        &_ivory{
+            background-color: #F2F1E8;
+        }
+        &_dark-blue{
+            background-color: #050533;
+        }
+        &_red{
+            background-color: #E34234;
+        }
+    }
+}
