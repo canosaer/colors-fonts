@@ -27,6 +27,9 @@ TABLE OF CONTENTS:
 @use 'footer';
 
 /* 2. Fonts ================================== */
+//SET 1
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani&display=swap');
 
 
 /* 3. General ================================ */
@@ -40,8 +43,8 @@ a{
 }
 
 body{
-	background: whitesmoke;
-	font-family:'Lucida Sans', sans-serif;
+	background: var(--background-color);
+	font-family: var(--text-font);
 }
 
 #root{
@@ -53,6 +56,134 @@ main{
 }
 
 /* 4. Utility ================================ */
+
+.retro-punch{
+    &__color{
+        &_cyan{
+            color: #2FF3E0;
+        }
+        &_gold{
+            color: #F8D210;
+        }
+        &_pink{
+            color: #FA26A0;
+        }
+        &_red{
+            color: #F51720;
+        }
+    }
+    &__background{
+        &_cyan{
+            background-color: #2FF3E0;
+        }
+        &_gold{
+            background-color: #F8D210;
+        }
+        &_pink{
+            background-color: #FA26A0;
+        }
+        &_red{
+            background-color: #F51720;
+        }
+    }
+}
+
+.window-tide{
+    &__color{
+        &_midnight-blue{
+            color: #41729F;
+        }
+        &_blue-gray{
+            // light
+            color: #5885AF;
+        }
+        &_dark-blue{
+            // dark
+            color: #274472;
+        }
+        &_baby-blue{
+            color: #C3E0E5;
+        }
+    }
+    &__background{
+        &_midnight-blue{
+            background-color: #41729F;
+        }
+        &_blue-gray{
+            // light
+            background-color: #5885AF;
+        }
+        &_dark-blue{
+            // dark
+            background-color: #274472;
+        }
+        &_baby-blue{
+            background-color: #C3E0E5;
+        }
+    }
+}
+
+.bold-geometry{
+    &__color{
+        &_light-blue{
+            color: #0D698B;
+        }
+        &_ivory{
+            color: #F2F1E8;
+        }
+        &_dark-blue{
+            color: #050533;
+        }
+        &_red{
+            color: #E34234;
+        }
+    }
+    &__background{
+        &_light-blue{
+            background-color: #0D698B;
+        }
+        &_ivory{
+            background-color: #F2F1E8;
+        }
+        &_dark-blue{
+            background-color: #050533;
+        }
+        &_red{
+            background-color: #E34234;
+        }
+    }
+}
+
+.teenage-pop{
+    &__color{
+        &_aqua{
+            color: #71E7E0;
+        }
+        &_pink{
+            color: #FF8BDA;
+        }
+        &_blue{
+            color: #43A9DD;
+        }
+        &_fuchsia{
+            color: #F12E90;
+        }
+    }
+    &__background{
+        &_aqua{
+            background-color: #71E7E0;
+        }
+        &_pink{
+            background-color: #FF8BDA;
+        }
+        &_blue{
+            background-color: #43A9DD;
+        }
+        &_fuchsia{
+            background-color: #F12E90;
+        }
+    }
+}
 
 .hidden{
 	display: none;

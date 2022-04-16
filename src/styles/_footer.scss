@@ -28,12 +28,12 @@
     &__social-icon{
         background: none;
         border: none;
-        color: var(--light-blue);
+        color: var(--light-color);
         font-size: 1.3rem;
         cursor: pointer;
 
         &:hover{
-            color: var(--dark-blue);
+            color: var(--dark-color);
         }
 
         &_email{

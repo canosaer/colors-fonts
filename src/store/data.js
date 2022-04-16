@@ -1,5 +1,8 @@
+import palettes from './palettes'
+
 const data = {
-    activeTags: [],
+    activePalette: palettes[0],
+    activeFonts: '',
 }
 
 export default data

@@ -17,6 +17,7 @@
         text-align: right;
         padding-right: 5rem;
         padding-left: 2.5rem;
+        font-family: var(--heading-font);
 
 		@include mixins.landscape{
 			font-size: 2.75rem;
@@ -37,7 +38,7 @@
         font-size: 1.25rem;
         background: white;
         border-radius: 0.2rem;
-        color: var(--dark-blue);
+        color: var(--dark-color);
         @include mixins.default-grid;
         place-items: center;
 
@@ -54,7 +55,7 @@
 
     &__text{
         padding: 2rem 3%;
-        color: var(--dark-blue);
+        color: var(--dark-color);
 		line-height: 1.5;
 		font-size: 1.35rem;
 		text-align: center;
@@ -82,101 +83,4 @@
 	padding: 0.25rem;
 	border-radius: 0.7rem;
 	
-}
-
-.retro-punch{
-    &__color{
-        &_cyan{
-            color: #2FF3E0;
-        }
-        &_gold{
-            color: #F8D210;
-        }
-        &_pink{
-            color: #FA26A0;
-        }
-        &_red{
-            color: #F51720;
-        }
-    }
-    &__background{
-        &_cyan{
-            background-color: #2FF3E0;
-        }
-        &_gold{
-            background-color: #F8D210;
-        }
-        &_pink{
-            background-color: #FA26A0;
-        }
-        &_red{
-            background-color: #F51720;
-        }
-    }
-}
-
-.window-tide{
-    &__color{
-        &_midnight-blue{
-            color: #41729F;
-        }
-        &_blue-gray{
-            // light
-            color: #5885AF;
-        }
-        &_dark-blue{
-            // dark
-            color: #274472;
-        }
-        &_baby-blue{
-            color: #C3E0E5;
-        }
-    }
-    &__background{
-        &_midnight-blue{
-            background-color: #41729F;
-        }
-        &_blue-gray{
-            // light
-            background-color: #5885AF;
-        }
-        &_dark-blue{
-            // dark
-            background-color: #274472;
-        }
-        &_baby-blue{
-            background-color: #C3E0E5;
-        }
-    }
-}
-
-.bold-geometry{
-    &__color{
-        &_light-blue{
-            color: #0D698B;
-        }
-        &_ivory{
-            color: #F2F1E8;
-        }
-        &_dark-blue{
-            color: #050533;
-        }
-        &_red{
-            color: #E34234;
-        }
-    }
-    &__background{
-        &_light-blue{
-            background-color: #0D698B;
-        }
-        &_ivory{
-            background-color: #F2F1E8;
-        }
-        &_dark-blue{
-            background-color: #050533;
-        }
-        &_red{
-            background-color: #E34234;
-        }
-    }
 }

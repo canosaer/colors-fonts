@@ -3,35 +3,36 @@
 
 .hero{
 	@include mixins.default-grid;
-	padding: 0 2rem;
+	padding: 2.5rem 0 4rem;
 	margin-top: 1rem;
-	color: var(--dark-blue);
+	color: var(--dark-color);
+}
 
-	&__image{
-		@include mixins.default-img;
-		width: 18rem;
-		justify-self: center;
+.palette{
+	place-self: center center;
+	display: flex;
+	text-align: center;
+	background-color: var(--background-color);
+	font-size: 1.05rem;
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__color{
+		width: 4rem;
+		height: 10rem;
+		margin: 0.25rem 0.5rem;
 		border-radius: 0.7rem;
-		margin-bottom: 5rem;
-		box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.75);
+		box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+
+		@include mixins.landscape{
+			width: 6rem;
+			height: 13.5rem;
+			margin: 0.75rem 0.6rem;
+		}
 	}
 
-	&__heading{
-		text-align: center;
-		font-size: 3rem;
-		margin: 4rem 0rem 1.5rem;
-		font-weight: bold;
-	}
 
-	&__text{
-		opacity: 0.9;
-		line-height: 1.4;
-		font-size: 1.5rem;
-		text-align: center;
-		margin-bottom: 3.35rem;
-	}
-
-	&__link{
-		font-weight: bold;
-	}
 }

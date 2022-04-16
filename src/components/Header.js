@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import palettes from '../store/palettes'
+import { Context } from '../store/store'
 
 export default function Header() {
     const [menuOpen, setMenuOpen ] = useState(false);
     const [toggleBars, setToggleBars ] = useState([]);
+    const [state, dispatch] = useContext(Context)
 
     const sidebarStyles = menuOpen ? 'menu menu_open' : 'menu'
     const dimmerStyles = menuOpen ? 'dimmer dimmer_open' : 'dimmer'
@@ -41,7 +44,20 @@ export default function Header() {
             setToggleBars(toggleArray)
         } 
 
-    }, [menuOpen]);
+    }, [menuOpen])
+
+    const updatePalette = (target) => {
+        if(menuOpen) setMenuOpen(!menuOpen)
+        if(state.activePalette.name.toLowerCase() !== target){
+            const activePalette = palettes.filter(palette => palette.name.toLowerCase() === target)[0]
+            const cssRootVariables = document.documentElement.style
+            cssRootVariables.setProperty('--background-color', activePalette.bodyColor)
+            cssRootVariables.setProperty('--dark-color', activePalette.darkColor)
+            cssRootVariables.setProperty('--light-color', activePalette.lightColor)
+            dispatch ({type: 'UPDATE_PALETTE', payload: activePalette})
+        }
+
+    }
 
     return(
         <header className="header">
@@ -60,9 +76,13 @@ export default function Header() {
 
             <nav className={sidebarStyles}>
                 <ul className="menu__list">
-                    <li className="menu__item"><a href="#" onClick={() => menuOpen ? setMenuOpen(!menuOpen) : null} className="menu__link">Window Tide</a></li>
-                    <li className="menu__item"><a href="#" onClick={() => menuOpen ? setMenuOpen(!menuOpen) : null} className="menu__link">Retro Punch</a></li>
-                    <li className="menu__item"><a href="#" onClick={() => menuOpen ? setMenuOpen(!menuOpen) : null} className="menu__link">Bold Geometry</a></li>
+                    {palettes.map((palette, i) => {
+                        const key = `palette--${i}`
+
+                        return(
+                            <li key={key} className="menu__item"><a href="#" onClick={(e) => updatePalette(e.target.innerText.toLowerCase())} className="menu__link">{palette.name} <div className="menu__bar"></div> </a></li>
+                        )
+                    })}
                 </ul>
             </nav>
         </header>
