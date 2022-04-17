@@ -27,25 +27,14 @@ TABLE OF CONTENTS:
 @use 'footer';
 
 /* 2. Fonts ================================== */
-//Audiowide + Mukta Vaan
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani&display=swap');
-
-//Sirin Stencil + Varela
-@import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
-
-//Black Ops One + Halant
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Halant&display=swap');
-
-//Baumans + Martel
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
-
-//Revalia + Cairo
 @import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 
 /* 3. General ================================ */
 
@@ -103,7 +92,7 @@ main{
     }
 }
 
-.window-tide{
+.super-chill{
     &__color{
         &_midnight-blue{
             color: #41729F;
@@ -196,6 +185,68 @@ main{
         }
         &_fuchsia{
             background-color: #F12E90;
+        }
+    }
+}
+
+.cyberpunk{
+    &__color{
+        &_coral{
+            color: #E57F84;
+        }
+        &_teal{
+            color: #4297A0;
+        }
+        &_blue{
+            color: #2F5061;
+        }
+        &_ivory{
+            color: #F4EAE6;
+        }
+    }
+    &__background{
+        &_coral{
+            background-color: #E57F84;
+        }
+        &_teal{
+            background-color: #4297A0;
+        }
+        &_blue{
+            background-color: #2F5061;
+        }
+        &_ivory{
+            background-color: #F4EAE6;
+        }
+    }
+}
+
+.tech-boy{
+    &__color{
+        &_navy-blue{
+            color: #05445E;
+        }
+        &_blue-grotto{
+            color: #189AB4;
+        }
+        &_blue-green{
+            color: #75E6DA;
+        }
+        &_baby-blue{
+            color: #D4F1F4;
+        }
+    }
+    &__background{
+        &_navy-blue{
+            background-color: #05445E;
+        }
+        &_blue-grotto{
+            background-color: #189AB4;
+        }
+        &_blue-green{
+            background-color: #75E6DA;
+        }
+        &_baby-blue{
+            background-color: #D4F1F4;
         }
     }
 }

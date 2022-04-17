@@ -22,11 +22,12 @@
 	}
 
 	&__heading{
-		font-size: 2rem;
+		font-size: var(--heading-font-small);
 		color: var(--dark-color);
 		grid-row: 1/2;
 		justify-self: left;
 		font-family: var(--heading-font);
+		text-transform: var(--text-transform);
 		
 	}
 }
@@ -138,6 +139,12 @@
         transition: color 250ms ease-in-out;
 		position: relative;
 		font-family: var(--heading-font);
+		font-size: var(--menu-font-mobile);
+
+		@include mixins.medium-screen{
+			font-size: var(--menu-font-size);
+		}
+		
 
 		&:hover{
 			color: var(--dark-color);
@@ -152,7 +159,7 @@
 	&__bar{
 		position: absolute;
 		left: 0;
-		top: 1.85rem;
+		top: var(--bar-spacing-mobile);
 		height: 3px;
 		width: 100%;
 		background-color: var(--dark-color);
@@ -161,8 +168,7 @@
 		transform: scaleX(0);
 
 		@include mixins.medium-screen{
-			top: 1.3rem;
-
+			top: var(--bar-spacing-desktop);
 		}
 
 	}

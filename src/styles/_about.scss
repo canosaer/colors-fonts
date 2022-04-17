@@ -18,9 +18,10 @@
         padding-right: 5rem;
         padding-left: 2.5rem;
         font-family: var(--heading-font);
+        text-transform: var(--text-transform);
 
 		@include mixins.landscape{
-			font-size: 2.75rem;
+			font-size: var(--heading-font-big);
 		}
 
         @include mixins.medium-screen{
