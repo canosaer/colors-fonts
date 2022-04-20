@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
 import Footer from './components/Footer'
+import Logos from './components/Logos'
 
 import React from 'react';
 
@@ -15,6 +16,7 @@ function App() {
       <main className="home">
         <Hero />
         <About />
+        <Logos />
       </main>
       <Footer />
     </>
