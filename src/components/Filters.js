@@ -13,10 +13,10 @@ export default function Filters() {
         cssRootVariables.setProperty('--heading-font', headingFont)
         cssRootVariables.setProperty('--text-font', textFont)
         
-        if( value === 2 ) cssRootVariables.setProperty('--text-transform', 'uppercase')
+        if( value === 0 ) cssRootVariables.setProperty('--text-transform', 'uppercase')
         else cssRootVariables.setProperty('--text-transform', 'capitalize')
 
-        if( value === 0 ){
+        if( value === 1 ){
             cssRootVariables.setProperty('--menu-font-size', '1.1rem')
             cssRootVariables.setProperty('--bar-spacing-mobile', '1.55rem')
             cssRootVariables.setProperty('--bar-spacing-desktop', '1.3rem')
@@ -24,7 +24,7 @@ export default function Filters() {
             cssRootVariables.setProperty('--heading-font-small', '2rem')
             cssRootVariables.setProperty('--heading-font-big', '2.75rem')
         } 
-        else if( value === 1 ){
+        else if( value === 2 ){
             cssRootVariables.setProperty('--menu-font-size', '0.95rem')
             cssRootVariables.setProperty('--bar-spacing-mobile', '1.6rem')
             cssRootVariables.setProperty('--bar-spacing-desktop', '1.85rem')
@@ -33,7 +33,7 @@ export default function Filters() {
             cssRootVariables.setProperty('--heading-font-big', '2.3rem')
             
         } 
-        else if( value === 2 ){
+        else if( value === 0 ){
             cssRootVariables.setProperty('--menu-font-size', '1.85rem')
             cssRootVariables.setProperty('--bar-spacing-mobile', '1.6rem')
             cssRootVariables.setProperty('--bar-spacing-desktop', '1.85rem')

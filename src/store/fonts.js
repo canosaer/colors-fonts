@@ -1,5 +1,13 @@
 const fonts = [
     [   
+        {   name: 'Rationale',
+            fallback: 'sans-serif',
+        },
+        {   name: 'Montserrat',
+            fallback: 'sans-serif',
+        },
+    ],
+    [   
         {   name: 'Audiowide',
             fallback: 'cursive',
         },
@@ -12,14 +20,6 @@ const fonts = [
             fallback: 'cursive',
         },
         {   name: 'Open Sans',
-            fallback: 'sans-serif',
-        },
-    ],
-    [   
-        {   name: 'Rationale',
-            fallback: 'sans-serif',
-        },
-        {   name: 'Mitr',
             fallback: 'sans-serif',
         },
     ],
