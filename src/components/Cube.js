@@ -4,8 +4,9 @@ import { gsap } from "gsap";
 
 const LogoCube = () => {
 
-    const [ cubeWrapper, setCubeWrapper ] = useState(null);
-    const [ cubeInitialized, setCubeInitialized ] = useState(false);
+    const [ cubeWrapper, setCubeWrapper ] = useState(null)
+    const [ cubeInitialized, setCubeInitialized ] = useState(false)
+    const [ cubeUnlocked, setCubeUnlocked ] = useState(false)
 
     const containerDiv = useRef();
 
@@ -43,7 +44,7 @@ const LogoCube = () => {
     return (
       <div>
         <center>
-            <div ref={containerDiv} onMouseEnter={unlockCube}
+            <div ref={containerDiv} onMouseDown={cubeUnlocked ? null : unlockCube}
             style={{
                 width: 200,
                 height: 200,
