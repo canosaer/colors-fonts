@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState} from 'react';
 import Cube from 'react-3d-cube';
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 
 const LogoCube = () => {
 
     const [ cubeWrapper, setCubeWrapper ] = useState(null)
     const [ cubeInitialized, setCubeInitialized ] = useState(false)
-    const [ cubeUnlocked, setCubeUnlocked ] = useState(false)
+    const [ cubeLocked, setCubeLocked ] = useState(true)
+    const [ ready, setReady ] = useState(false)
 
     const containerDiv = useRef();
 
@@ -19,6 +20,7 @@ const LogoCube = () => {
             const timer = setTimeout(() => {
                 cubeWrapper.classList.remove('enter-transition')
                 cubeWrapper.classList.add('exit-transition')
+                setReady(true)
             }, 2000);
 
             return () => clearTimeout(timer);
@@ -26,11 +28,12 @@ const LogoCube = () => {
     }, [cubeWrapper]);
 
     const unlockCube = () => {
+        setCubeLocked(false)
         cubeWrapper.classList.remove('initial-cube')
         const timer = setTimeout(() => {
             if(cubeWrapper.classList.contains('exit-transition')) cubeWrapper.classList.remove('exit-transition')
             if(cubeWrapper.classList.contains('enter-transition')) cubeWrapper.classList.remove('enter-transition')
-        }, 1500);
+        }, 750);
         return () => clearTimeout(timer);
     }
 
@@ -41,9 +44,11 @@ const LogoCube = () => {
         }
     }, [containerDiv]);
 
+
+
     return (
         <>
-            <div className="cube__slot" ref={containerDiv} onMouseDown={cubeUnlocked ? null : unlockCube}
+            <div className="cube__slot" ref={containerDiv} onMouseDown={(cubeLocked && ready) ? unlockCube : null}
             style={{
                 width: 200,
                 height: 200,
