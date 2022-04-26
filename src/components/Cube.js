@@ -42,9 +42,8 @@ const LogoCube = () => {
     }, [containerDiv]);
 
     return (
-      <div>
-        <center>
-            <div ref={containerDiv} onMouseDown={cubeUnlocked ? null : unlockCube}
+        <>
+            <div className="cube__slot" ref={containerDiv} onMouseDown={cubeUnlocked ? null : unlockCube}
             style={{
                 width: 200,
                 height: 200,
@@ -75,8 +74,7 @@ const LogoCube = () => {
                     </div>
                 </Cube>
             </div>
-        </center>
-      </div>
+        </>
     );
 }
 
